@@ -1,0 +1,33 @@
+This game is a personal project to reinforce knowledge and gain comfort writing various programming languages. 
+
+It has gone through several iterations* and is finally at a place where I am comfortable sharing my progress.
+
+The core languages used in this application are:
+HTML5 
+CSS
+JavaScript
+
+The HTML file is a single page with 'modal' sections that toggle visibilty based on user input. 
+The CSS calls down multiple files, each targeting specific components of the application.
+The JavaScript is modular, spanning across various files similar to the way components function in 'React'.
+
+My design began with the FILE Architecture:
+A single IMAGE folder to hold the images used.
+A CSS folder to hold the CSS files.
+A main JS file to hold all of the components:
+  The various JS components: CHARACTERS, CHATS, ENEMIES, MINI GAMES, PAGES, UTIL.
+  The ENEMIES folder branches into AMBUSH, BATTLEDOME, and INVASION: each targeting specific enemy interactions. 
+Two main files {index.js and index.html} live in the main folder of the Application, along with 
+the notes.md and Read-Me.txt files. 
+
+The data lives in various JSON object files, though none is pushed to an 
+API or handled with localStorage, sessionStorage etc.
+
+While much can admittedly be improved with a design such as this I believe this serves as a fine example
+as my creativity and ability with web-design and development. 
+
+* I was prepared to publish a prior version of this game where most of the interactive elements used 
+the html <button></button> tag - though I failed to account for button interactivity on mobile devices 
+requiring a different event handler to fire the associated function. This latest version (while not something 
+I would suggest in most cases) uses the html <a></a> tag to make each interactive element a 'link' with the
+current page as the source ref. 

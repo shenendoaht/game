@@ -1,0 +1,140 @@
+.talkBtn {
+  text-transform: uppercase;
+}
+
+.searchBtn:hover, .searchBtn:focus, .inv-btn:hover, .inv-btn:focus {
+  cursor: grab;
+  box-shadow: 3px 3px 3px rgba(12, 0, 139, 0.66);
+  transition-timing-function: ease-in-out;
+  transition-duration: 1s;
+}
+
+.itemBtn:hover, .itemBtn:focus {
+  cursor: grabbing;
+  box-shadow: 2px 2px 3px rgba(131, 32, 218, 0.709);
+  transition-timing-function: ease-in-out;
+  transition-duration: 1s;
+}
+.buyBtn:hover, .buyBtn:focus{
+  cursor: grabbing;
+  box-shadow: 3px 5px 5px rgba(102, 255, 47, 0.846);
+  transition-timing-function: ease-in-out;
+  transition-duration: 1s;
+}
+.nav:hover, .nav:focus, .explore:hover, .explore:focus {
+  cursor: pointer;
+  box-shadow: 3px 3px 4px rgba(255, 172, 47, 0.629);
+  transition-timing-function: ease-in-out;
+  transition-duration: 1s;
+}
+.action:hover, .action:focus, .talkBtn:hover, .talkBtn:focus {
+  cursor: pointer;
+  box-shadow: 3px 3px 4px rgba(47, 196, 255, 0.642);
+  transition-timing-function: ease-in-out;
+  transition-duration: 1s;
+}
+.btn {
+  border: solid 1px darkblue;
+  border-radius: 12.5%;
+  max-height: fit-content;
+  max-width: fit-content;
+  margin: 10px auto;
+  background-color: lightgrey;
+  color: black;
+  font-weight: bold;
+  padding: .35rem;
+}
+
+.explore {
+  margin-top: 3rem;
+}
+
+.statBtn {
+  height: fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+#statRoll {
+  height: 50px;
+  width: 50px;
+  background-image: url('/IMAGE/elements/r20die.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  font-weight: bold;
+  margin: 20px auto;
+  border: none;
+  display: none;
+  /* display: none; */
+}
+
+#statRoll:hover, #statRoll:focus {
+  height: 60px;
+  width: 60px;
+  cursor: grab;
+  transition-delay: 100ms;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+}
+.choiceBtns {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.choice-btn:hover, .choice-btn:focus {
+  box-shadow: 1px 1px black;
+  text-transform: uppercase;
+  font-size: larger;
+  transition-duration: 1.5s;
+  transition-timing-function: ease-in-out;
+}
+
+#barChoice, 
+#drunkChoice, 
+#begChoice, 
+#huChoice, 
+#soldierChoice, 
+#soldierYes-No,
+#captiveChoice, #captiveTalk {
+  display: none;
+}
+#soldierChoice, #soldierYes-No, #soldierRespond {
+  justify-content: space-around;
+  margin: 10px auto;
+}
+
+#readyBtn, 
+#coinBtn, 
+#aleBtn, 
+#meadBtn, 
+#purseBtn, 
+#potionBtn, 
+#receiptBtn, 
+#tSwordBtn, 
+#shieldBtn, 
+#appleBtn {
+  display: none;
+}
+#d1Fight, 
+#d2Fight, 
+#d3Fight, 
+#orcFight, 
+#goblinFight, 
+#banditFight, 
+#golemFight, 
+#minotaurFight, 
+#gladiatorFight, 
+#berserkerFight, 
+#guardianFight, 
+#giantFight, 
+#thiefFight, 
+#trollFight,
+#invaderFight {
+  display: none;
+  justify-content: space-between;
+}
+#createUserBtn {
+  display: flex;
+  justify-content: space-around;
+}

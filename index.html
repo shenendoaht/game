@@ -1,0 +1,1585 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/CSS/armor.css" rel="stylesheet" />
+    <link href="/CSS/button.css" rel="stylesheet" />
+    <link href="/CSS/char.css" rel="stylesheet" />
+    <link href="/CSS/elements.css" rel="stylesheet" />
+    <link href="/CSS/enemies.css" rel="stylesheet" />
+    <link href="/CSS/items.css" rel="stylesheet" />
+    <link href="/CSS/main.css" rel="stylesheet" />
+    <link href="/CSS/navs.css" rel="stylesheet" />
+    <link href="/CSS/player.css" rel="stylesheet" />
+    <link href="/CSS/weapons.css" rel="stylesheet" />
+    <title>Shen's Game Vers 8</title>
+  </head>
+  <body>
+    <!-- WELCOME ----SECTIONS only display when toggled ------->
+    <section class="" id="welcome">
+      <header>
+        <h1 class="pgTitle">WELCOME</h1>
+        <h2 class="evntMsg" id="welcomeMsg"></h2>
+      </header>
+      <div id="welcomeCont">
+        <div id="login">
+          <!-- <input type="email" placeholder="address@email.com" id="userEl" />
+          <input type="password" /> 
+            To create LOGIN ACTION when hooked up to API
+        -->
+          <div class="scroll">
+            <div class="scrollText">
+              <p>ENTER THE BATTLEDOME</p>
+              <p>
+                This game may forever be a work in progress... <br />
+                Built with ❤️‍🔥 using HTML, CSS & JavaScript. Enjoy! <br />
+                - ST
+              </p>
+            </div>
+          </div>
+          <div class="btn"><a href="#" id="loginBtn">LET'S GO</a></div>
+        </div>
+        <div id="playerGen">
+          <label for="playerName">Name Your Player!</label>
+          <input type="text" placeholder="namey mcnamerson" id="playerName" />
+          <a class="btn" href="#" id="namePlayerBtn">NAME PLAYER</a>
+        </div>
+        <a href="#" class="statBtn" id="statRoll"></a>
+        <div class="player" id="welcomePlayer">
+          <div class="avatar"></div>
+          <a class="btn inv-btn" id="viewWelcomeInv">INVENTORY</a>
+          <div class="stats" id="welcomeStat"></div>
+          <div class="inventory" id="welcomeInv">
+            <h4 class="inv-Label">Items:</h4>
+            <div id="welcomeItem"></div>
+            <h4 class="inv-Label">Weapons:</h4>
+            <div id="welcomeWeap"></div>
+            <h4 class="inv-Label">Armor:</h4>
+            <div id="welcomeArmor"></div>
+            <h4 class="inv-Label">Foes Vanquished:</h4>
+            <div id="welcomeVanq"></div>
+            <a href="#" class="btn inv-btn" id="hideWelcomeInv">CLOSE</a>
+          </div>
+        </div>
+      </div>
+      <div class="scroll" id="instructions">
+        <div class="scrollText">
+          <p>TO WIN:</p>
+          <p>
+            Defeat ALL the enemies in the Battledome or reach level 10! <br />
+            Explore the world and gather items to grow your character! <br />
+            Bon chance!
+          </p>
+        </div>
+      </div>
+      <footer>
+        <nav>
+          <a href="#" class="btn nav" id="readyBtn">READY</a>
+        </nav>
+      </footer>
+    </section>
+    <!-- HOME -->
+    <section class="modal" id="house">
+      <header>
+        <h1 class="pgTitle">Ye Olde House</h1>
+        <h2 class="evntMsg" id="houseMsg"></h2>
+      </header>
+      <h3 class="dialogue" id="houseTalk"></h3>
+      <a href="#" class="btn explore" id="expHouse">EXPLORE</a>
+      <div class="content" id="houseCont"></div>
+      <div class="player" id="housePlayer">
+        <div class="avatar"></div>
+        <a class="btn inv-btn" id="viewHouseInv">INVENTORY</a>
+        <div class="stats" id="houseStat"></div>
+        <div class="inventory" id="houseInv">
+          <h4 class="inv-Label">Items:</h4>
+          <div id="houseItem"></div>
+          <h4 class="inv-Label">Weapons:</h4>
+          <div id="houseWeap"></div>
+          <h4 class="inv-Label">Armor:</h4>
+          <div id="houseArmor"></div>
+          <h4 class="inv-Label">Foes Vanquished:</h4>
+          <div id="houseVanq"></div>
+          <a href="#" class="btn inv-btn" id="hideHouseInv">CLOSE</a>
+        </div>
+      </div>
+      <footer>
+        <nav>
+          <a href="#" class="btn nav" id="upstairs">UPSTAIRS</a>
+          <a href="#" class="btn nav" id="houseTown">TOWN</a>
+        </nav>
+      </footer>
+    </section>
+    <!-- BEDROOM -->
+    <section class="modal" id="bedroom">
+      <header>
+        <h1 class="pgTitle">Ye Olde Bedchambers</h1>
+        <h2 class="evntMsg" id="bedMsg"></h2>
+      </header>
+      <h3 class="dialogue" id="bedTalk"></h3>
+      <a href="#" class="btn explore" id="expBed">EXPLORE</a>
+      <div class="content" id="bedCont">
+        <a href="#" class="btn action" id="bedRest">REST</a>
+      </div>
+      <div class="player" id="bedPlayer">
+        <div class="avatar"></div>
+        <a class="btn inv-btn" id="viewBedInv">INVENTORY</a>
+        <div class="stats" id="bedStat"></div>
+        <div class="inventory" id="bedInv">
+          <h4 class="inv-Label">Items:</h4>
+          <div id="bedItem"></div>
+          <h4 class="inv-Label">Weapons:</h4>
+          <div id="bedWeap"></div>
+          <h4 class="inv-Label">Armor:</h4>
+          <div id="bedArmor"></div>
+          <h4 class="inv-Label">Foes Vanquished:</h4>
+          <div id="bedVanq"></div>
+          <a href="#" class="btn inv-btn" id="hideBedInv">CLOSE</a>
+        </div>
+      </div>
+      <footer>
+        <nav>
+          <a href="#" class="btn nav" id="bedHouse">DOWNSTAIRS</a>
+        </nav>
+      </footer>
+    </section>
+    <!-- TOWN -->
+    <section class="modal" id="town">
+      <header>
+        <h1 class="pgTitle">TOWN</h1>
+        <h2 class="evntMsg" id="townMsg"></h2>
+      </header>
+      <h3 class="dialogue" id="townTalk"></h3>
+      <a href="#" class="btn explore" id="expTown">EXPLORE</a>
+      <div class="content" id="townCont">
+        <div class="group">
+          <div>
+            <div class="character" id="monk"></div>
+            <a class="talkBtn btn" id="monkTalk">Talk</a>
+          </div>
+          <div>
+            <div class="character" id="maid"></div>
+            <a class="talkBtn btn" id="maidTalk">Talk</a>
+          </div>
+        </div>
+        <div class="element" id="fountain">
+          <a class="searchBtn btn" id="searchTown">SEARCH</a>
+          <div class="item" id="coins"></div>
+          <a class="itemBtn btn" id="coinBtn">Take</a>
+        </div>
+      </div>
+      <div class="player" id="townPlayer">
+        <div class="avatar"></div>
+        <a class="btn inv-btn" id="viewTownInv">INVENTORY</a>
+        <div class="stats" id="townStat"></div>
+        <div class="inventory" id="townInv">
+          <h4 class="inv-Label">Items:</h4>
+          <div id="townItem"></div>
+          <h4 class="inv-Label">Weapons:</h4>
+          <div id="townWeap"></div>
+          <h4 class="inv-Label">Armor:</h4>
+          <div id="townArmor"></div>
+          <h4 class="inv-Label">Foes Vanquished:</h4>
+          <div id="townVanq"></div>
+          <a href="#" class="btn inv-btn" id="hideTownInv">CLOSE</a>
+        </div>
+      </div>
+      <footer>
+        <nav>
+          <a href="#" class="btn nav" id="townTav">TAVERN</a>
+          <a href="#" class="btn nav" id="townHouse">HOUSE</a>
+          <a href="#" class="btn nav" id="townShop">SHOP</a>
+          <a href="#" class="btn nav" id="townDock">DOCK</a>
+          <a href="#" class="btn nav" id="townArena">ARENA</a>
+        </nav>
+      </footer>
+    </section>
+    <!-- TAVERN -->
+    <section class="modal" id="tavern">
+      <header>
+        <h1 class="pgTitle">The Sticky Mug Tavern</h1>
+        <h2 class="evntMsg" id="tavMsg"></h2>
+      </header>
+      <h3 class="dialogue" id="tavTalk"></h3>
+      <a href="#" class="btn explore" id="expTav">EXPLORE</a>
+      <div class="content" id="tavCont">
+        <a href="#" class="btn nav" id="tavInn">UPSTAIRS</a>
+        <div class="group">
+          <div>
+            <div class="character" id="bartender"></div>
+            <a class="talkBtn btn" id="barTalk">Talk</a>
+            <div class="choiceBtns" id="barChoice">
+              <a href="#" class="choice-btn btn" id="barYes">Yes</a>
+              <a href="#" class="choice-btn btn" id="barNo">No</a>
+            </div>
+          </div>
+          <div>
+            <div class="character" id="drunk"></div>
+            <a class="talkBtn btn" id="drunkTalk">Talk</a>
+            <div class="choiceBtns" id="drunkChoice">
+              <a href="#" class="choice-btn btn" id="drunkYes">Yes</a>
+              <a href="#" class="choice-btn btn" id="drunkNo">No</a>
+            </div>
+          </div>
+        </div>
+        <div class="item" id="ale"></div>
+        <a href="#" class="itemBtn btn" id="aleBtn">Take</a>
+        <div class="item" id="mead"></div>
+        <a href="#" class="itemBtn btn" id="meadBtn">Take</a>
+        <div class="element" id="bar">
+          <a href="#" class="searchBtn btn" id="searchTav">SEARCH</a>
+          <div class="item" id="purse"></div>
+          <a href="#" class="itemBtn btn" id="purseBtn">Take</a>
+        </div>
+      </div>
+      <div class="player" id="tavPlayer">
+        <div class="avatar"></div>
+        <a class="btn inv-btn" id="viewTavInv">INVENTORY</a>
+        <div class="stats" id="tavStat"></div>
+        <div class="inventory" id="tavInv">
+          <h4 class="inv-Label">Items:</h4>
+          <div id="tavItem"></div>
+          <h4 class="inv-Label">Weapons:</h4>
+          <div id="tavWeap"></div>
+          <h4 class="inv-Label">Armor:</h4>
+          <div id="tavArmor"></div>
+          <h4 class="inv-Label">Foes Vanquished:</h4>
+          <div id="tavVanq"></div>
+          <a href="#" class="btn inv-btn" id="hideTavInv">CLOSE</a>
+        </div>
+      </div>
+      <footer>
+        <nav>
+          <a href="#" class="btn nav" id="tavTown">TOWN</a>
+        </nav>
+      </footer>
+    </section>
+    <!-- INN -->
+    <section class="modal" id="inn">
+      <header>
+        <h1 class="pgTitle">The Sleep Inn</h1>
+        <h2 class="evntMsg" id="innMsg"></h2>
+      </header>
+      <h3 class="dialogue" id="innTalk"></h3>
+      <a href="#" class="btn explore" id="expInn">EXPLORE</a>
+      <div class="content" id="innCont">
+        <a href="#" class="action btn" id="innRest">REST</a>
+        <div class="element">
+          <a href="#" class="searchBtn btn" id="searchInn">SEARCH</a>
+          <div class="item" id="potion"></div>
+          <a href="#" class="itemBtn btn" id="potionBtn">Take</a>
+        </div>
+      </div>
+      <div class="player" id="innPlayer">
+        <div class="avatar"></div>
+        <a class="btn inv-btn" id="viewInnInv">INVENTORY</a>
+        <div class="stats" id="innStat"></div>
+        <div class="inventory" id="innInv">
+          <h4 class="inv-Label">Items:</h4>
+          <div id="innItem"></div>
+          <h4 class="inv-Label">Weapons:</h4>
+          <div id="innWeap"></div>
+          <h4 class="inv-Label">Armor:</h4>
+          <div id="innArmor"></div>
+          <h4 class="inv-Label">Foes Vanquished:</h4>
+          <div id="innVanq"></div>
+          <a href="#" class="btn inv-btn" id="hideInnInv">CLOSE</a>
+        </div>
+      </div>
+      <footer>
+        <nav>
+          <a href="#" class="btn nav" id="innTav">DOWNSTAIRS</a>
+        </nav>
+      </footer>
+    </section>
+    <!-- SHOP -->
+    <section class="modal" id="shop">
+      <header>
+        <h1 class="pgTitle">Ye Olde Shoppe</h1>
+        <h2 class="evntMsg" id="shopMsg"></h2>
+      </header>
+      <h3 class="dialogue" id="shopTalk"></h3>
+      <a href="#" class="btn explore" id="expShop">EXPLORE</a>
+      <div class="content" id="shopCont">
+        <a href="#" class="shopBtn btn" id="shopWaresBtn">View Wares</a>
+        <div class="wares" id="shopWares">
+          <div class="element">
+            <h4 id="keyLabel"></h4>
+            <div class="item" id="key"></div>
+            <a href="#" class="buyBtn btn" id="keyBtn">Buy</a>
+          </div>
+          <div class="element">
+            <h4 id="flipFlopLabel"></h4>
+            <div class="item" id="flipFlops"></div>
+            <a href="#" class="buyBtn btn" id="flipFlopBtn">Buy</a>
+          </div>
+          <div class="element">
+            <h4 id="inflatBatLabel"></h4>
+            <div class="item" id="inflatBat"></div>
+            <a href="#" class="buyBtn btn" id="inflatBatBtn">Buy</a>
+          </div>
+          <div class="element">
+            <h4 id="fishtankLabel"></h4>
+            <div class="item" id="fishtank"></div>
+            <a href="#" class="buyBtn btn" id="fishtankBtn">Buy</a>
+          </div>
+        </div>
+        <div class="element">
+          <a href="#" class="searchBtn btn" id="searchShop">Search</a>
+          <div class="item" id="receipt"></div>
+          <a href="#" class="itemBtn btn" id="receiptBtn">Take</a>
+        </div>
+      </div>
+      <div class="player" id="shopPlayer">
+        <div class="avatar"></div>
+        <a class="btn inv-btn" id="viewShopInv">INVENTORY</a>
+        <div class="stats" id="shopStat"></div>
+        <div class="inventory" id="shopInv">
+          <h4 class="inv-Label">Items:</h4>
+          <div id="shopItem"></div>
+          <h4 class="inv-Label">Weapons:</h4>
+          <div id="shopWeap"></div>
+          <h4 class="inv-Label">Armor:</h4>
+          <div id="shopArmor"></div>
+          <h4 class="inv-Label">Foes Vanquished:</h4>
+          <div id="shopVanq"></div>
+          <a href="#" class="btn inv-btn" id="hideShopInv">CLOSE</a>
+        </div>
+      </div>
+      <footer>
+        <nav>
+          <a href="#" class="btn nav" id="shopTown">TOWN</a>
+        </nav>
+      </footer>
+    </section>
+    <!-- ARENA -->
+    <section class="modal" id="arena">
+      <header>
+        <h1 class="pgTitle">Arena</h1>
+        <h2 class="evntMsg" id="arenaMsg"></h2>
+      </header>
+      <h3 class="dialogue" id="arenaTalk"></h3>
+      <a href="#" class="btn explore" id="expArena">EXPLORE</a>
+      <div class="character" id="beggar"></div>
+      <div class="choiceBtns" id="begChoice">
+        <a href="#" class="choice-btn btn" id="begYes">yes</a>
+        <a href="#" class="choice-btn btn" id="begNo">no</a>
+      </div>
+      <div class="content" id="arenaCont">
+        <a href="#" class="btn nav" id="arenaBattle">BATTLEDOME</a>
+      </div>
+      <div class="player" id="arenaPlayer">
+        <div class="avatar"></div>
+        <a class="btn inv-btn" id="viewArenaInv">INVENTORY</a>
+        <div class="stats" id="arenaStat"></div>
+        <div class="inventory" id="arenaInv">
+          <h4 class="inv-Label">Items:</h4>
+          <div id="arenaItem"></div>
+          <h4 class="inv-Label">Weapons:</h4>
+          <div id="arenaWeap"></div>
+          <h4 class="inv-Label">Armor:</h4>
+          <div id="arenaArmor"></div>
+          <h4 class="inv-Label">Foes Vanquished:</h4>
+          <div id="arenaVanq"></div>
+          <a href="#" class="btn inv-btn" id="hideArenaInv">CLOSE</a>
+        </div>
+      </div>
+      <footer>
+        <nav id="arenaNav">
+          <a href="#" class="btn nav" id="arenaTown">TOWN</a>
+          <a href="#" class="btn nav" id="arenaQuad">TRAINING QUAD</a>
+          <a href="#" class="btn nav" id="arenaArmory">ARMORY</a>
+        </nav>
+      </footer>
+    </section>
+    <!-- TRAINING QUAD -->
+    <section class="modal" id="quad">
+      <header>
+        <h1 class="pgTitle">Ye Olde Training-Quad</h1>
+        <h2 class="evntMsg" id="quadMsg"></h2>
+      </header>
+      <h3 class="dialogue" id="quadTalk"></h3>
+      <a href="#" class="btn explore" id="expQuad">EXPLORE</a>
+      <div class="content" id="quadCont">
+        <div class="choiceBtns" id="quadChoice">
+          <a href="#" class="choice-btn btn" id="quadYes">YES</a>
+          <a href="#" class="choice-btn btn" id="quadNo">NO</a>
+        </div>
+        <div class="element">
+          <div class="weapon" id="trainingSword"></div>
+          <a href="#" class="itemBtn btn" id="tSwordBtn">Take</a>
+        </div>
+        <div>
+          <div class="enemy" id="dummy"></div>
+          <div class="enemyStat" id="dummyStat"></div>
+        </div>
+        <div class="dice" id="quad-dice">
+          <div class="enemy-dice" id="dummyDice">
+            <div class="enemy-die" id="dumD1"></div>
+            <div class="enemy-die" id="dumD2"></div>
+            <div class="enemy-die" id="dumD3"></div>
+          </div>
+          <div class="player-dice" id="quadDice">
+            <div class="player-die" id="qD1"></div>
+            <div class="player-die" id="qD2"></div>
+            <div class="player-die" id="qD3"></div>
+          </div>
+        </div>
+        <div class="fightBtns" id="quadFight">
+          <div class="fightBtns" id="d1Fight">
+            <a href="#" class="fight-btn btn" id="atkD1">attack</a>
+            <a href="#" class="fight-btn btn" id="defD1">defend</a>
+          </div>
+          <div class="fightBtns" id="d2Fight">
+            <a href="#" class="fight-btn btn" id="atkD2">attack</a>
+            <a href="#" class="fight-btn btn" id="defD2">defend</a>
+          </div>
+          <div class="fightBtns" id="d3Fight">
+            <a href="#" class="fight-btn btn" id="atkD3">attack</a>
+            <a href="#" class="fight-btn btn" id="defD3">defend</a>
+          </div>
+        </div>
+      </div>
+      <div class="player" id="quadPlayer">
+        <div class="avatar"></div>
+        <a class="btn inv-btn" id="viewQuadInv">INVENTORY</a>
+        <div class="stats" id="quadStat"></div>
+        <div class="inventory" id="quadInv">
+          <h4 class="inv-Label">Items:</h4>
+          <div id="quadItem"></div>
+          <h4 class="inv-Label">Weapons:</h4>
+          <div id="quadWeap"></div>
+          <h4 class="inv-Label">Armor:</h4>
+          <div id="quadArmor"></div>
+          <h4 class="inv-Label">Foes Vanquished:</h4>
+          <div id="quadVanq"></div>
+          <a href="#" class="btn inv-btn" id="hideQuadInv">CLOSE</a>
+        </div>
+      </div>
+      <footer>
+        <nav>
+          <a href="#" class="btn nav" id="quadArena">ARENA</a>
+        </nav>
+      </footer>
+    </section>
+    <!-- ARMORY -->
+    <section class="modal" id="armory">
+      <header>
+        <h1 class="pgTitle">Ye Olde Armory</h1>
+        <h2 class="evntMsg" id="armoryMsg"></h2>
+      </header>
+      <h3 class="dialogue" id="armoryTalk"></h3>
+      <a href="#" class="btn explore" id="expArmory">EXPLORE</a>
+      <div class="content" id="armoryCont">
+        <a href="#" class="shopBtn btn" id="armoryWaresBtn">View Wares</a>
+        <div class="choiceBtns">
+          <a href="#" class="shopBtn btn" id="armorBtn">Armor</a>
+          <a href="#" class="shopBtn btn" id="weaponBtn">Weapons</a>
+        </div>
+        <div class="wares" id="armoryWeapons">
+          <div class="element">
+            <h4 id="bowLabel"></h4>
+            <div class="weapon" id="bow"></div>
+            <a href="#" class="buyBtn btn" id="bowBtn">Buy</a>
+          </div>
+          <div class="element">
+            <h4 id="daggerLabel"></h4>
+            <div class="weapon" id="dagger"></div>
+            <a href="#" class="buyBtn btn" id="daggerBtn">Buy</a>
+          </div>
+          <div class="element">
+            <h4 id="crossbowLabel"></h4>
+            <div class="weapon" id="crossbow"></div>
+            <a href="#" class="buyBtn btn" id="crossbowBtn">Buy</a>
+          </div>
+          <div class="element">
+            <h4 id="broadswordLabel"></h4>
+            <div class="weapon" id="broadsword"></div>
+            <a href="#" class="buyBtn btn" id="broadswordBtn">Buy</a>
+          </div>
+        </div>
+        <div class="wares" id="armoryArmor">
+          <div class="element">
+            <h4 id="gauntletLabel"></h4>
+            <div class="armor" id="gauntlet"></div>
+            <a href="#" class="buyBtn btn" id="gauntletBtn">Buy</a>
+          </div>
+          <div class="element">
+            <h4 id="chainmailLabel"></h4>
+            <div class="armor" id="chainmail"></div>
+            <a href="#" class="buyBtn btn" id="chainmailBtn">Buy</a>
+          </div>
+          <div class="element">
+            <h4 id="bowlingShoesLabel"></h4>
+            <div class="armor" id="bowlingShoes"></div>
+            <a href="#" class="buyBtn btn" id="bowlingShoesBtn">Buy</a>
+          </div>
+          <div class="element">
+            <h4 id="topHatLabel"></h4>
+            <div class="armor" id="topHat"></div>
+            <a href="#" class="buyBtn btn" id="topHatBtn">Buy</a>
+          </div>
+        </div>
+      </div>
+      <div class="player" id="armoryPlayer">
+        <div class="avatar"></div>
+        <a class="btn inv-btn" id="viewArmoryInv">INVENTORY</a>
+        <div class="stats" id="armoryStat"></div>
+        <div class="inventory" id="armoryInv">
+          <h4 class="inv-Label">Items:</h4>
+          <div id="armoryItem"></div>
+          <h4 class="inv-Label">Weapons:</h4>
+          <div id="armoryWeap"></div>
+          <h4 class="inv-Label">Armor:</h4>
+          <div id="armoryArmor"></div>
+          <h4 class="inv-Label">Foes Vanquished:</h4>
+          <div id="armoryVanq"></div>
+          <a href="#" class="btn inv-btn" id="hideArmoryInv">CLOSE</a>
+        </div>
+      </div>
+      <footer>
+        <nav>
+          <a href="#" class="btn nav" id="armoryArena">ARENA</a>
+        </nav>
+      </footer>
+    </section>
+    <!-- BATTLEDOME -->
+    <section class="modal" id="battledome">
+      <header>
+        <h1 class="pgTitle">THE BATTLEDOME</h1>
+        <h2 class="evntMsg" id="battleMsg"></h2>
+      </header>
+      <h3 class="dialogue" id="battleTalk"></h3>
+      <a href="#" class="btn explore" id="expBattle">EXPLORE</a>
+      <div class="content" id="battleCont">
+        <div class="choiceBtns" id="battleChoice">
+          <a href="#" class="choice-btn btn" id="battYes">YES</a>
+          <a href="#" class="choice-btn btn" id="battNo">NO</a>
+        </div>
+        <div class="dice" id="battDice">
+          <div class="enemy-dice" id="enemyDice">
+            <div class="enemy-die" id="enD1"></div>
+            <div class="enemy-die" id="enD2"></div>
+            <div class="enemy-die" id="enD3"></div>
+          </div>
+          <div class="player-dice" id="battleDice">
+            <div class="player-die" id="bD1"></div>
+            <div class="player-die" id="bD2"></div>
+            <div class="player-die" id="bD3"></div>
+          </div>
+        </div>
+        <div class="opponents">
+          <div>
+            <div class="enemy" id="orc"></div>
+            <div class="enemyStat" id="orcStat"></div>
+          </div>
+          <div>
+            <div class="enemy" id="goblin"></div>
+            <div class="enemyStat" id="gobStat"></div>
+          </div>
+          <div>
+            <div class="enemy" id="bandit"></div>
+            <div class="enemyStat" id="banditStat"></div>
+          </div>
+          <div>
+            <div class="enemy" id="golem"></div>
+            <div class="enemyStat" id="golemStat"></div>
+          </div>
+          <div>
+            <div class="enemy" id="minotaur"></div>
+            <div class="enemyStat" id="minoStat"></div>
+          </div>
+          <div>
+            <div class="enemy" id="gladiator"></div>
+            <div class="enemyStat" id="gladStat"></div>
+          </div>
+          <div>
+            <div class="enemy" id="berserker"></div>
+            <div class="enemyStat" id="berserkStat"></div>
+          </div>
+          <div>
+            <div class="enemy" id="guardian"></div>
+            <div class="enemyStat" id="gaurdianStat"></div>
+          </div>
+          <div>
+            <div class="enemy" id="giant"></div>
+            <div class="enemyStat" id="giantStat"></div>
+          </div>
+        </div>
+        <div class="fightBtns" id="battFight">
+          <div class="fightBtns" id="orcFight">
+            <a href="#" class="fight-btn btn" id="orcAtk">attack</a>
+            <a href="#" class="fight-btn btn" id="orcDef">defend</a>
+          </div>
+          <div class="fightBtns" id="goblinFight">
+            <a href="#" class="fight-btn btn" id="gobAtk">attack</a>
+            <a href="#" class="fight-btn btn" id="gobDef">defend</a>
+          </div>
+          <div class="fightBtns" id="banditFight">
+            <a href="#" class="fight-btn btn" id="banAtk">attack</a>
+            <a href="#" class="fight-btn btn" id="banDef">defend</a>
+          </div>
+          <div class="fightBtns" id="golemFight">
+            <a href="#" class="fight-btn btn" id="golAtk">attack</a>
+            <a href="#" class="fight-btn btn" id="golDef">defend</a>
+          </div>
+          <div class="fightBtns" id="minotaurFight">
+            <a href="#" class="fight-btn btn" id="minoAtk">attack</a>
+            <a href="#" class="fight-btn btn" id="minoDef">defend</a>
+          </div>
+          <div class="fightBtns" id="gladiatorFight">
+            <a href="#" class="fight-btn btn" id="gladAtk">attack</a>
+            <a href="#" class="fight-btn btn" id="gladDef">defend</a>
+          </div>
+          <div class="fightBtns" id="berserkerFight">
+            <a href="#" class="fight-btn btn" id="berAtk">attack</a>
+            <a href="#" class="fight-btn btn" id="berDef">defend</a>
+          </div>
+          <div class="fightBtns" id="guardianFight">
+            <a href="#" class="fight-btn btn" id="guarAtk">attack</a>
+            <a href="#" class="fight-btn btn" id="guarDef">defend</a>
+          </div>
+          <div class="fightBtns" id="giantFight">
+            <a href="#" class="fight-btn btn" id="giantAtk">attack</a>
+            <a href="#" class="fight-btn btn" id="giantDef">defend</a>
+          </div>
+        </div>
+      </div>
+      <div class="player" id="battlePlayer">
+        <div class="avatar"></div>
+        <a class="btn inv-btn" id="viewBattleInv">INVENTORY</a>
+        <div class="stats" id="battleStat"></div>
+        <div class="inventory" id="battleInv">
+          <h4 class="inv-Label">Items:</h4>
+          <div id="battleItem"></div>
+          <h4 class="inv-Label">Weapons:</h4>
+          <div id="battleWeap"></div>
+          <h4 class="inv-Label">Armor:</h4>
+          <div id="battleArmor"></div>
+          <h4 class="inv-Label">Foes Vanquished:</h4>
+          <div id="battleVanq"></div>
+          <a href="#" class="btn inv-btn" id="hideBattleInv">CLOSE</a>
+        </div>
+      </div>
+      <footer>
+        <nav>
+          <a href="#" class="btn nav" id="battleArena">ARENA</a>
+        </nav>
+      </footer>
+    </section>
+    <!-- FOREST -->
+    <section class="modal" id="forest">
+      <header>
+        <h1 class="pgTitle">Sorta Scary Forest</h1>
+        <h2 class="evntMsg" id="forestMsg"></h2>
+      </header>
+      <h3 class="dialogue" id="forestTalk"></h3>
+      <a href="#" class="btn explore" id="expForest">EXPLORE</a>
+      <div class="content" id="forestCont">
+        <div class="character" id="soldier"></div>
+        <a href="#" class="talkBtn btn" id="soldierBtn">Talk</a>
+        <div class="choiceBtns" id="soldierChoice">
+          <div class="choiceBtns" id="soldierYes-No">
+            <a href="#" class="choice-btn btn" id="soldierYes">Yes</a>
+            <a href="#" class="choice-btn btn" id="soldierNo">No</a>
+          </div>
+          <div class="choiceBtns" id="soldierRespond">
+            <a href="#" class="choice-btn btn" id="soldierChoice1"></a>
+            <a href="#" class="choice-btn btn" id="soldierChoice2"></a>
+            <a href="#" class="choice-btn btn" id="soldierChoice3"></a>
+          </div>
+        </div>
+        <div class="dice" id="forestDice">
+          <div class="enemy-dice" id="thiefDice">
+            <div class="enemy-die" id="thiefD1"></div>
+            <div class="enemy-die" id="thiefD2"></div>
+            <div class="enemy-die" id="thiefD3"></div>
+          </div>
+          <div class="player-dice" id="forestPlayerDice">
+            <div class="player-die" id="forD1"></div>
+            <div class="player-die" id="forD2"></div>
+            <div class="player-die" id="forD3"></div>
+          </div>
+        </div>
+        <div class="opponents">
+          <div>
+            <div class="enemy" id="thief"></div>
+            <div class="enemyStat" id="thiefStat"></div>
+          </div>
+        </div>
+        <div class="fightBtns" id="thiefFight">
+          <a href="#" class="fight-btn btn" id="thiefAtk">attack</a>
+          <a href="#" class="fight-btn btn" id="thiefDef">defend</a>
+        </div>
+        <div class="element" id="tree">
+          <a href="#" class="searchBtn btn" id="searchTree">SEARCH</a>
+          <div class="item" id="arrows"></div>
+          <a href="#" class="itemBtn btn" id="arrowBtn">Take</a>
+        </div>
+      </div>
+      <div class="player" id="forestPlayer">
+        <div class="avatar"></div>
+        <a class="btn inv-btn" id="viewForestInv">INVENTORY</a>
+        <div class="stats" id="forestStat"></div>
+        <div class="inventory" id="forestInv">
+          <h4 class="inv-Label">Items:</h4>
+          <div id="forestItem"></div>
+          <h4 class="inv-Label">Weapons:</h4>
+          <div id="forestWeap"></div>
+          <h4 class="inv-Label">Armor:</h4>
+          <div id="forestArmor"></div>
+          <h4 class="inv-Label">Foes Vanquished:</h4>
+          <div id="forestVanq"></div>
+          <a href="#" class="btn inv-btn" id="hideForestInv">CLOSE</a>
+        </div>
+      </div>
+      <footer>
+        <nav>
+          <a href="#" class="btn nav" id="forestTown">TOWN</a>
+          <a href="#" class="btn nav" id="forestBridge">BRIDGE</a>
+        </nav>
+      </footer>
+    </section>
+    <!-- BRIDGE -->
+    <section class="modal" id="bridge">
+      <header>
+        <h1 class="pgTitle">Rickety Bridge</h1>
+        <h2 class="evntMsg" id="bridgeMsg"></h2>
+      </header>
+      <h3 class="dialogue" id="bridgeTalk"></h3>
+      <a href="#" class="btn explore" id="expBridge">EXPLORE</a>
+      <div class="content" id="bridgeCont">
+        <div class="dice" id="bridgeDice">
+          <div class="enemy-dice" id="trollDice">
+            <div class="enemy-die" id="trollD1"></div>
+            <div class="enemy-die" id="trollD2"></div>
+            <div class="enemy-die" id="trollD3"></div>
+          </div>
+          <div class="player-dice" id="bridgePlayerDice">
+            <div class="player-die" id="bridgeD1"></div>
+            <div class="player-die" id="bridgeD2"></div>
+            <div class="player-die" id="bridgeD3"></div>
+          </div>
+        </div>
+        <div class="opponents">
+          <div>
+            <div class="enemy" id="troll"></div>
+            <div class="enemyStat" id="trollStat"></div>
+          </div>
+        </div>
+        <div class="fightBtns" id="trollFight">
+          <a href="#" class="fight-btn btn" id="trollAtk">attack</a>
+          <a href="#" class="fight-btn btn" id="trollDef">defend</a>
+        </div>
+        <div class="item" id="shield"></div>
+        <a href="#" class="itemBtn btn" id="shieldBtn">Take</a>
+      </div>
+      <div class="player" id="bridgePlayer">
+        <div class="avatar"></div>
+        <a class="btn inv-btn" id="viewBridgeInv">INVENTORY</a>
+        <div class="stats" id="bridgeStat"></div>
+        <div class="inventory" id="bridgeInv">
+          <h4 class="inv-Label">Items:</h4>
+          <div id="bridgeItem"></div>
+          <h4 class="inv-Label">Weapons:</h4>
+          <div id="bridgeWeap"></div>
+          <h4 class="inv-Label">Armor:</h4>
+          <div id="bridgeArmor"></div>
+          <h4 class="inv-Label">Foes Vanquished:</h4>
+          <div id="bridgeVanq"></div>
+          <a href="#" class="btn inv-btn" id="hideBridgeInv">CLOSE</a>
+        </div>
+      </div>
+      <footer>
+        <nav>
+          <a href="#" class="btn nav" id="bridgeForest">FOREST</a>
+          <a href="#" class="btn nav" id="bridgeRiver">RIVER</a>
+          <a href="#" class="btn nav" id="bridgeClear">CLEARING</a>
+        </nav>
+      </footer>
+    </section>
+    <!-- RIVER -->
+    <section class="modal" id="river">
+      <header>
+        <h1 class="pgTitle">River</h1>
+        <h2 class="evntMsg" id="riverMsg"></h2>
+      </header>
+      <h3 class="dialogue" id="riverTalk"></h3>
+      <a href="#" class="btn explore" id="expRiver">EXPLORE</a>
+      <div class="content" id="riverCont">
+        <!-- FISHER -->
+        <!-- FISHER CHOICE (YES/NO)-->
+        <!-- IF YES - GIVE P1 -> FISHING ROD -->
+        <!-- FISHING MINI GAME (CATCH FISH)-->
+      </div>
+      <div class="player" id="riverPlayer">
+        <div class="avatar"></div>
+        <a class="btn inv-btn" id="viewRiverInv">INVENTORY</a>
+        <div class="stats" id="riverStat"></div>
+        <div class="inventory" id="riverInv">
+          <h4 class="inv-Label">Items:</h4>
+          <div id="riverItem"></div>
+          <h4 class="inv-Label">Weapons:</h4>
+          <div id="riverWeap"></div>
+          <h4 class="inv-Label">Armor:</h4>
+          <div id="riverArmor"></div>
+          <h4 class="inv-Label">Foes Vanquished:</h4>
+          <div id="riverVanq"></div>
+          <a href="#" class="btn inv-btn" id="hideRiverInv">CLOSE</a>
+        </div>
+      </div>
+      <footer>
+        <nav>
+          <a href="#" class="btn nav" id="riverBridge">BRIDGE</a>
+        </nav>
+      </footer>
+    </section>
+    <!-- CLEARING -->
+    <section class="modal" id="clearing">
+      <header>
+        <h1 class="pgTitle">Clearing</h1>
+        <h2 class="evntMsg" id="clearMsg"></h2>
+      </header>
+      <h3 class="dialogue" id="clearTalk"></h3>
+      <a href="#" class="btn explore" id="expClear">EXPLORE</a>
+      <div class="content" id="clearCont">
+        <a href="#" class="btn nav" id="clearHut">HUT</a>
+        <div id="ambush">
+          <div class="dice" id="ambushDice">
+            <div class="enemy-dice" id="clearDice">
+              <div class="enemy-die" id="clrD1"></div>
+              <div class="enemy-die" id="clrD2"></div>
+              <div class="enemy-die" id="clrD3"></div>
+            </div>
+            <div class="player-dice" id="ambushPlayerDice">
+              <div class="player-die" id="apD1"></div>
+              <div class="player-die" id="apD2"></div>
+              <div class="player-die" id="apD3"></div>
+            </div>
+          </div>
+          <div class="opponents">
+            <div>
+              <div class="enemy" id="guardOne"></div>
+              <div class="enemyStat" id="guardOneStat"></div>
+            </div>
+            <div>
+              <div class="enemy" id="guardTwo"></div>
+              <div class="enemyStat" id="guardTwoStat"></div>
+            </div>
+            <div>
+              <div class="enemy" id="witch"></div>
+              <div class="enemyStat" id="witchStat"></div>
+            </div>
+          </div>
+          <div class="fightBtns">
+            <div class="fightBtns" id="guardOneFight">
+              <a href="#" class="fight-btn btn" id="guardOneAtk">attack</a>
+              <a href="#" class="fight-btn btn" id="guardOneDef">defend</a>
+            </div>
+            <div class="fightBtns" id="guardTwoFight">
+              <a href="#" class="fight-btn btn" id="guardTwoAtk">attack</a>
+              <a href="#" class="fight-btn btn" id="guardTwoDef">defend</a>
+            </div>
+            <div class="fightBtns" id="witchFight">
+              <a href="#" class="fight-btn btn" id="witchAtk">attack</a>
+              <a href="#" class="fight-btn btn" id="witchDef">defend</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="player" id="clearPlayer">
+        <div class="avatar"></div>
+        <a class="btn inv-btn" id="viewClearInv">INVENTORY</a>
+        <div class="stats" id="clearStat"></div>
+        <div class="inventory" id="clearInv">
+          <h4 class="inv-Label">Items:</h4>
+          <div id="clearItem"></div>
+          <h4 class="inv-Label">Weapons:</h4>
+          <div id="clearWeap"></div>
+          <h4 class="inv-Label">Armor:</h4>
+          <div id="clearArmor"></div>
+          <h4 class="inv-Label">Foes Vanquished:</h4>
+          <div id="clearVanq"></div>
+          <a href="#" class="btn inv-btn" id="hideClearInv">CLOSE</a>
+        </div>
+      </div>
+      <footer>
+        <nav>
+          <a href="#" class="btn nav" id="clearBridge">BRIDGE</a>
+        </nav>
+      </footer>
+    </section>
+    <!-- HUT -->
+    <section class="modal" id="hut">
+      <header>
+        <h1 class="pgTitle">Witch's Hut</h1>
+        <h2 class="evntMsg" id="hutMsg"></h2>
+      </header>
+      <h3 class="dialogue" id="hutTalk"></h3>
+      <a href="#" class="btn explore" id="expHut">EXPLORE</a>
+      <div class="content" id="hutCont">
+        <!-- SIGN -->
+        <div class="element">
+          <div id="sign">
+            <div id="signText">Keep Out!</div>
+          </div>
+          <a href="#" class="searchBtn btn" id="readSign">Read Sign</a>
+        </div>
+        <!-- GLOVES -->
+      </div>
+      <div class="player" id="hutPlayer">
+        <div class="avatar"></div>
+        <a class="btn inv-btn" id="viewHutInv">INVENTORY</a>
+        <div class="stats" id="hutStat"></div>
+        <div class="inventory" id="hutInv">
+          <h4 class="inv-Label">Items:</h4>
+          <div id="hutItem"></div>
+          <h4 class="inv-Label">Weapons:</h4>
+          <div id="hutWeap"></div>
+          <h4 class="inv-Label">Armor:</h4>
+          <div id="hutArmor"></div>
+          <h4 class="inv-Label">Foes Vanquished:</h4>
+          <div id="hutVanq"></div>
+          <a href="#" class="btn inv-btn" id="hideHutInv">CLOSE</a>
+        </div>
+      </div>
+      <footer>
+        <nav>
+          <a href="#" class="btn nav" id="hutClear">CLEARING</a>
+          <a href="#" class="btn nav" id="hutEnter">ENTER HUT</a>
+        </nav>
+      </footer>
+    </section>
+    <!-- INSIDE HUT -->
+    <section class="modal" id="intHut">
+      <header>
+        <h1 class="pgTitle">WITCH'S CHAMBERS</h1>
+        <h2 class="evntMsg" id="intHutMsg"></h2>
+      </header>
+      <h3 class="dialogue" id="intHutTalk"></h3>
+      <a href="#" class="btn explore" id="expIntHut">EXPLORE</a>
+      <div class="content" id="intHutCont">
+        <!-- MEGA POTION 
+          IF TAKE: AMBUSH!
+        -->
+        <div class="element">
+          <a href="#" class="searchBtn btn" id="searchIntHut">SEARCH</a>
+          <div class="item" id="megaPotion"></div>
+          <a href="#" class="itemBtn btn" id="megaPotionBtn">Take</a>
+        </div>
+      </div>
+      <div class="player" id="intHutPlayer">
+        <div class="avatar"></div>
+        <a class="btn inv-btn" id="viewIntHutInv">INVENTORY</a>
+        <div class="stats" id="intHutStat"></div>
+        <div class="inventory" id="intHutInv">
+          <h4 class="inv-Label">Items:</h4>
+          <div id="intHutItem"></div>
+          <h4 class="inv-Label">Weapons</h4>
+          <div id="intHutWeap"></div>
+          <h4 class="inv-Label">Armor:</h4>
+          <div id="intHutArmor"></div>
+          <h4 class="inv-Label">Foes Vanquished:</h4>
+          <div id="intHutVanq"></div>
+          <a href="#" class="btn inv-btn" id="hideIntHutInv">CLOSE</a>
+        </div>
+      </div>
+      <footer>
+        <nav>
+          <a href="#" class="btn nav" id="hutExit">EXIT HUT</a>
+        </nav>
+      </footer>
+    </section>
+    <!-- DOCK -->
+    <section class="modal" id="dock">
+      <header>
+        <h1 class="pgTitle">Ye Olde Docks</h1>
+        <h2 class="evntMsg" id="dockMsg"></h2>
+      </header>
+      <h3 class="dialogue" id="dockTalk"></h3>
+      <a href="#" class="btn explore" id="expDock">EXPLORE</a>
+      <div class="content" id="dockCont">
+        <a href="#" class="btn nav" id="dockShip">BOARD SHIP</a>
+      </div>
+      <div class="player" id="dockPlayer">
+        <div class="avatar"></div>
+        <a class="btn inv-btn" id="viewDockInv">INVENTORY</a>
+        <div class="stats" id="dockStat"></div>
+        <div class="inventory" id="dockInv">
+          <h4 class="inv-Label">Items:</h4>
+          <div id="dockItem"></div>
+          <h4 class="inv-Label">Weapons:</h4>
+          <div id="dockWeap"></div>
+          <h4 class="inv-Label">Armor:</h4>
+          <div id="dockArmor"></div>
+          <h4 class="inv-Label">Foes Vanquished:</h4>
+          <div id="dockVanq"></div>
+          <a href="#" class="btn inv-btn" id="hideDockInv">CLOSE</a>
+        </div>
+      </div>
+      <footer>
+        <nav>
+          <a href="#" class="btn nav" id="dockForest">FOREST</a>
+          <a href="#" class="btn nav" id="dockTown">TOWN</a>
+        </nav>
+      </footer>
+    </section>
+    <!-- SHIP -->
+    <section class="modal" id="ship">
+      <header>
+        <h1 class="pgTitle">Semi Sturdy Ship</h1>
+        <h2 class="evntMsg" id="shipMsg"></h2>
+      </header>
+      <h3 class="dialogue" id="shipTalk"></h3>
+      <a href="#" class="btn explore" id="expShip">EXPLORE</a>
+      <div class="content" id="shipCont">
+        <div class="group">
+          <div>
+            <div class="character" id="captain"></div>
+            <a href="#" class="talkBtn btn" id="captainBtn">Talk</a>
+          </div>
+          <div>
+            <div class="character" id="boatswain"></div>
+            <a href="#" class="talkBtn btn" id="boatswainBtn">Talk</a>
+          </div>
+        </div>
+      </div>
+      <div class="player" id="shipPlayer">
+        <div class="avatar"></div>
+        <a class="btn inv-btn" id="viewShipInv">INVENTORY</a>
+        <div class="stats" id="shipStat"></div>
+        <div class="inventory" id="shipInv">
+          <h4 class="inv-Label">Items:</h4>
+          <div id="shipItem"></div>
+          <h4 class="inv-Label">Weapons:</h4>
+          <div id="shipWeap"></div>
+          <h4 class="inv-Label">Armor:</h4>
+          <div id="shipArmor"></div>
+          <h4 class="inv-Label">Foes Vanquished:</h4>
+          <div id="shipVanq"></div>
+          <a href="#" class="btn inv-btn" id="hideShipInv">CLOSE</a>
+        </div>
+      </div>
+      <footer>
+        <nav>
+          <a href="#" class="btn nav" id="shipDock">TOWN DOCKS</a>
+          <a href="#" class="btn nav" id="shipHull">HULL</a>
+          <a href="#" class="btn nav" id="shipIsland">ISLAND DOCKS</a>
+        </nav>
+      </footer>
+    </section>
+    <!-- HULL -->
+    <section class="modal" id="hull">
+      <header>
+        <h1 class="pgTitle">SHIP'S HULL</h1>
+        <h2 class="evntMsg" id="hullMsg"></h2>
+      </header>
+      <h3 class="dialogue" id="hullTalk"></h3>
+      <a href="#" class="btn explore" id="expHull">EXPLORE</a>
+      <div class="content" id="hullCont">
+        <div>
+          <div class="element" id="barrel">
+            <a href="#" class="searchBtn btn" id="searchBarrel">Search</a>
+            <div class="item" id="apple"></div>
+            <a href="#" class="itemBtn btn" id="appleBtn">Take</a>
+          </div>
+
+          <a href="#" class="searchBtn btn" id="searchHull">Search</a>
+        </div>
+        <div class="character" id="captive"></div>
+        <a href="#" class="talkBtn btn" id="captiveTalk">Talk</a>
+        <div class="choiceBtns" id="captiveChoice">
+          <a href="#" class="choice-btn btn" id="captiveFree">Free</a>
+          <a href="#" class="choice-btn btn" id="captiveIgnore">Ignore</a>
+        </div>
+      </div>
+      <div class="player" id="hullPlayer">
+        <div class="avatar"></div>
+        <a class="btn inv-btn" id="viewHullInv">INVENTORY</a>
+        <div class="stats" id="hullStat"></div>
+        <div class="inventory" id="hullInv">
+          <h4 class="inv-Label">Items:</h4>
+          <div id="hullItem"></div>
+          <h4 class="inv-Label">Weapons:</h4>
+          <div id="hullWeap"></div>
+          <h4 class="inv-Label">Armor:</h4>
+          <div id="hullArmor"></div>
+          <h4 class="inv-Label">Foes Vanquished:</h4>
+          <div id="hullVanq"></div>
+          <a href="#" class="btn inv-btn" id="hideHullInv">CLOSE</a>
+        </div>
+      </div>
+      <footer>
+        <nav>
+          <a href="#" class="btn nav" id="hullExit">TOPSIDE</a>
+        </nav>
+      </footer>
+    </section>
+    <!-- OCEAN  -->
+    <section class="modal" id="ocean">
+      <header>
+        <h1 class="pgTitle">Thrown Overboard!!</h1>
+        <h2 class="evntMsg" id="oceanMsg"></h2>
+      </header>
+      <h3 class="dialogue" id="oceanTalk"></h3>
+      <div class="element" id="sky"></div>
+      <div class="content" id="oceanCont">
+        <div id="rowboat">
+          <div class="player" id="oceanPlayer">
+            <div class="avatar"></div>
+            <a class="btn inv-btn" id="viewOceanInv">INVENTORY</a>
+            <div class="stats" id="oceanStat"></div>
+            <div class="inventory" id="oceanInv">
+              <h4 class="inv-Label">Items:</h4>
+              <div id="oceanItem"></div>
+              <h4 class="inv-Label">Weapons:</h4>
+              <div id="oceanWeap"></div>
+              <h4 class="inv-Label">Armor:</h4>
+              <div id="oceanArmor"></div>
+              <h4 class="inv-Label">Foes Vanquished:</h4>
+              <div id="oceanVanq"></div>
+              <a href="#" class="btn inv-btn" id="hideOceanInv">CLOSE</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <nav>
+          <a href="#" class="btn nav" id="oceanBeach">Desert Isle</a>
+        </nav>
+      </footer>
+    </section>
+    <!-- DESERT ISLE -->
+    <section class="modal" id="beach">
+      <header>
+        <h1 class="pgTitle">Island Beach</h1>
+        <h2 class="evntMsg" id="beachMsg"></h2>
+      </header>
+      <h3 class="dialogue" id="beachTalk"></h3>
+      <a href="#" class="btn explore" id="expBeach">EXPLORE</a>
+      <div class="element" id="sky"></div>
+      <div class="content" id="beachCont">
+        <!-- CRAB -->
+        <div>
+          <div class="character" id="crab"></div>
+          <a href="#" class="talkBtn btn" id="crabBtn">Talk</a>
+        </div>
+      </div>
+      <div class="player" id="beachPlayer">
+        <div class="avatar"></div>
+        <a class="btn inv-btn" id="viewBeachInv">INVENTORY</a>
+        <div class="stats" id="beachStat"></div>
+        <div class="inventory" id="beachInv">
+          <h4 class="inv-Label">Items:</h4>
+          <div id="beachItem"></div>
+          <h4 class="inv-Label">Weapons:</h4>
+          <div id="beachWeap"></div>
+          <h4 class="inv-Label">Armor:</h4>
+          <div id="beachArmor"></div>
+          <h4 class="inv-Label">Foes Vanquished:</h4>
+          <div id="beachVanq"></div>
+          <a href="#" class="btn inv-btn" id="hideBeachInv">CLOSE</a>
+        </div>
+      </div>
+      <footer>
+        <nav>
+          <a href="#" class="btn nav" id="innerIsleBtn">Inner Isle</a>
+        </nav>
+      </footer>
+    </section>
+    <!-- INNER ISLE -->
+    <section class="modal" id="innerIsle">
+      <header>
+        <h1 class="pgTitle">Inner Isle</h1>
+        <h2 class="evntMsg" id="innerIsleMsg"></h2>
+      </header>
+      <h3 class="dialogue" id="innerIsleTalk"></h3>
+      <a href="#" class="btn explore" id="expInnerIsle">EXPLORE</a>
+      <div class="element" id="sky"></div>
+      <div class="content" id="innerIsleCont">
+        <!-- KNIGHT?? -->
+      </div>
+      <div class="player" id="innerIslePlayer">
+        <div class="avatar"></div>
+        <a class="btn inv-btn" id="viewInnerIsleInv">INVENTORY</a>
+        <div class="stats" id="innerIsleStat"></div>
+        <div class="inventory" id="innerIsleInv">
+          <h4 class="inv-Label">Items:</h4>
+          <div id="innerIsleItem"></div>
+          <h4 class="inv-Label">Weapons:</h4>
+          <div id="innerIsleWeap"></div>
+          <h4 class="inv-Label">Armor:</h4>
+          <div id="innerIsleArmor"></div>
+          <h4 class="inv-Label">Foes Vanquished:</h4>
+          <div id="innerIsleVanq"></div>
+          <a href="#" class="btn inv-btn" id="hideInnerIsleInv">CLOSE</a>
+        </div>
+      </div>
+      <footer>
+        <nav>
+          <a href="#" class="btn nav" id="innerIsleBeach">Beach</a>
+        </nav>
+      </footer>
+    </section>
+    <!-- IF DEFEAT KNIGHT -> BUTTON FOR SHIP APPEAR? -->
+    <!-- SHIP TWO -->
+    <section class="modal" id="shipTwo">
+      <header>
+        <h1 class="pgTitle">Thrown Overboard!!</h1>
+        <h2 class="evntMsg" id="shipTwoMsg"></h2>
+      </header>
+      <h3 class="dialogue" id="shipTwoTalk"></h3>
+      <a href="#" class="btn explore" id="expShipTwo">EXPLORE</a>
+      <div class="content" id="shipTwoCont"></div>
+      <div class="player" id="shipTwoPlayer">
+        <div class="avatar"></div>
+        <a class="btn inv-btn" id="viewShipTwoInv">INVENTORY</a>
+        <div class="stats" id="shipTwoStat"></div>
+        <div class="inventory" id="shipTwoInv">
+          <h4 class="inv-Label">Items:</h4>
+          <div id="shipTwoItem"></div>
+          <h4 class="inv-Label">Weapons:</h4>
+          <div id="shipTwoWeap"></div>
+          <h4 class="inv-Label">Armor:</h4>
+          <div id="shipTwoArmor"></div>
+          <h4 class="inv-Label">Foes Vanquished:</h4>
+          <div id="shipTwoVanq"></div>
+          <a href="#" class="btn inv-btn" id="hideShipTwoInv">CLOSE</a>
+        </div>
+      </div>
+      <footer>
+        <nav>
+          <a href="#" class="btn nav" id="shipTwoDock">DOCK AT TOWN</a>
+        </nav>
+      </footer>
+    </section>
+    <!-- ISLAND -->
+    <section class="modal" id="island">
+      <header>
+        <h1 class="pgTitle">Ye Island Docks</h1>
+        <h2 class="evntMsg" id="islandMsg"></h2>
+      </header>
+      <h3 class="dialogue" id="islandTalk"></h3>
+      <a href="#" class="btn explore" id="expIsland">EXPLORE</a>
+      <div class="content" id="islandCont">
+        <!-- CONSTABLE -->
+      </div>
+      <div class="player" id="islandPlayer">
+        <div class="avatar"></div>
+        <a class="btn inv-btn" id="viewIslandInv">INVENTORY</a>
+        <div class="stats" id="islandStat"></div>
+        <div class="inventory" id="islandInv">
+          <h4 class="inv-Label">Items:</h4>
+          <div id="islandItem"></div>
+          <h4 class="inv-Label">Weapons</h4>
+          <div id="islandWeap"></div>
+          <h4 class="inv-Label">Armory:</h4>
+          <div id="islandArmor"></div>
+          <h4 class="inv-Label">Foes Vanquished:</h4>
+          <div id="islandVanq"></div>
+          <a href="#" class="btn inv-btn" id="hideIslandInv">CLOSE</a>
+        </div>
+      </div>
+      <footer>
+        <nav>
+          <a href="#" class="btn nav" id="islandVillage">VILLAGE</a>
+          <a href="#" class="btn nav" id="islandShip">BOARD SHIP</a>
+        </nav>
+      </footer>
+    </section>
+    <!-- VILLAGE -->
+    <section class="modal" id="village">
+      <header>
+        <h1 class="pgTitle">Ye Olde Village</h1>
+        <h2 class="evntMsg" id="villageMsg"></h2>
+      </header>
+      <h3 class="dialogue" id="villageTalk"></h3>
+      <a href="#" class="btn explore" id="expVillage">EXPLORE</a>
+      <div class="content" id="villageCont">
+        <!-- OLD MAID -->
+      </div>
+      <div class="player" id="villagePlayer">
+        <div class="avatar"></div>
+        <a class="btn inv-btn" id="viewVillageInv">INVENTORY</a>
+        <div class="stats" id="villageStat"></div>
+        <div class="inventory" id="villageInv">
+          <h4 class="inv-Label">Items:</h4>
+          <div id="villageItem"></div>
+          <h4 class="inv-Label">Weapons:</h4>
+          <div id="villageWeap"></div>
+          <h4 class="inv-Label">Armor:</h4>
+          <div id="villageArmor"></div>
+          <h4 class="inv-Label">Foes Vanquished:</h4>
+          <div id="villageVanq"></div>
+          <a href="#" class="btn inv-btn" id="hideVillageInv">CLOSE</a>
+        </div>
+      </div>
+      <footer>
+        <nav>
+          <a href="#" class="btn nav" id="villageDock">DOCKS</a>
+          <a href="#" class="btn nav" id="villageOut">OUTSKIRTS</a>
+        </nav>
+      </footer>
+    </section>
+    <!-- OUTSKIRT -->
+    <section class="modal" id="outskirt">
+      <header>
+        <h1 class="pgTitle">Village Outskirts</h1>
+        <h2 class="evntMsg" id="outMsg"></h2>
+      </header>
+      <h3 class="dialogue" id="outTalk"></h3>
+      <a href="#" class="btn explore" id="expOut">EXPLORE</a>
+      <div class="content" id="outCont">
+        <div class="dice" id="outDice">
+          <div class="enemy-dice" id="invaderDice">
+            <div class="enemy-dice" id="invaderOneDice">
+              <div class="enemy-die" id="invaderOneD1"></div>
+              <div class="enemy-die" id="invaderOneD2"></div>
+            </div>
+            <div class="enemy-dice" id="invaderTwoDice">
+              <div class="enemy-die" id="invaderOneD1"></div>
+              <div class="enemy-die" id="invaderOneD2"></div>
+            </div>
+          </div>
+          <div class="player-dice" id="outPlayerDice">
+            <div class="player-die" id="outD1"></div>
+            <div class="player-die" id="outD2"></div>
+            <div class="player-die" id="outD3"></div>
+            <div class="player-die" id="outD4"></div>
+          </div>
+        </div>
+        <div class="group opponents">
+          <div>
+            <div class="enemy" id="invaderOne"></div>
+            <div class="enemyStat" id="invaderOneStat"></div>
+          </div>
+          <div>
+            <div class="enemy" id="invaderTwo"></div>
+            <div class="enemyStat" id="invaderTwoStat"></div>
+          </div>
+        </div>
+        <div class="fightBtns" id="invaderFight">
+          <a href="#" class="fight-btn btn" id="invaderAtk">Attack</a>
+          <a href="#" class="fight-btn btn" id="invaderDef">Defend</a>
+        </div>
+      </div>
+      <div class="player" id="outPlayer">
+        <div class="avatar"></div>
+        <a class="btn inv-btn" id="viewOutInv">INVENTORY</a>
+        <div class="stats" id="outStat"></div>
+        <div class="inventory" id="outInv">
+          <h4 class="inv-Label">Items:</h4>
+          <div id="outItem"></div>
+          <h4 class="inv-Label">Weapons:</h4>
+          <div id="outWeap"></div>
+          <h4 class="inv-Label">Armor:</h4>
+          <div id="outArmor"></div>
+          <h4 class="inv-Label">Foes Vanquished:</h4>
+          <div id="outVanq"></div>
+          <a href="#" class="btn inv-btn" id="hideOutInv">CLOSE</a>
+        </div>
+      </div>
+      <footer>
+        <nav>
+          <a href="#" class="btn nav" id="outVillage">VILLAGE</a>
+          <a href="#" class="btn nav" id="outMount">UP MOUNTAIN</a>
+        </nav>
+      </footer>
+    </section>
+    <!-- MOUNTAIN -->
+    <section class="modal" id="mountain">
+      <header>
+        <h1 class="pgTitle">Mountain Path</h1>
+        <h2 class="evntMsg" id="mountMsg"></h2>
+      </header>
+      <h3 class="dialogue" id="mountTalk"></h3>
+      <a href="#" class="btn explore" id="expMount">EXPLORE</a>
+      <div class="content" id="mountCont">
+        <!-- SHEPHERD -->
+        <!-- SHEP CHOICE (YES/NO) -->
+        <!-- SHEEP COUNT MINI GAME 
+            IF WIN: GET ITEM
+            IF LOSE: WAKE UP AT OVERLOOK
+        -->
+      </div>
+      <div class="player" id="mountPlayer">
+        <div class="avatar"></div>
+        <a class="btn inv-btn" id="viewMountInv">INVENTORY</a>
+        <div class="stats" id="mountStat"></div>
+        <div class="inventory" id="mountInv">
+          <h4 class="inv-Label">Items:</h4>
+          <div id="mountItem"></div>
+          <h4 class="inv-Label">Weapons:</h4>
+          <div id="mountWeap"></div>
+          <h4 class="inv-Label">Armor:</h4>
+          <div id="mountArmor"></div>
+          <h4 class="inv-Label">Foes Vanquished:</h4>
+          <div id="mountVanq"></div>
+          <a href="#" class="btn inv-btn" id="hideMountInv">CLOSE</a>
+        </div>
+      </div>
+      <footer>
+        <nav>
+          <a href="#" class="btn nav" id="mountOut">DOWN MOUNTAIN</a>
+          <a href="#" class="btn nav" id="mountTemp">UP MOUNTAIN</a>
+        </nav>
+      </footer>
+    </section>
+    <!-- TEMPLE -->
+    <section class="modal" id="temple">
+      <header>
+        <h1 class="pgTitle">HU'S TEMPLE</h1>
+        <h2 class="evntMsg" id="templeMsg"></h2>
+      </header>
+      <h3 class="dialogue" id="templeTalk"></h3>
+      <a href="#" class="btn explore" id="expTemple">EXPLORE</a>
+      <div class="content" id="templeCont">
+        <a href="#" class="btn nav" id="mountOver">OVERLOOK</a>
+        <div>
+          <div class="character" id="greatMonkHu"></div>
+          <a href="#" class="talkBtn btn" id="greatMonkBtn">Talk</a>
+          <div class="choiceBtns" id="huChoice">
+            <a href="#" class="choice-btn btn" id="huYes">Yes</a>
+            <a href="#" class="choice-btn btn" id="huNo">No</a>
+          </div>
+        </div>
+        <div class="element">
+          <div class="item" id="magicStick"></div>
+          <a href="#" class="itemBtn btn" id="magicStickBtn">Take</a>
+        </div>
+      </div>
+      <div class="player" id="templePlayer">
+        <div class="avatar"></div>
+        <a class="btn inv-btn" id="viewTempleInv">INVENTORY</a>
+        <div class="stats" id="templeStat"></div>
+        <div class="inventory" id="templeInv">
+          <h4 class="inv-Label">Items:</h4>
+          <div id="templeItem"></div>
+          <h4 class="inv-Label">Weapons:</h4>
+          <div id="templeWeap"></div>
+          <h4 class="inv-Label">Armor:</h4>
+          <div id="templeArmor"></div>
+          <h4 class="inv-Label">Foes Vanquished:</h4>
+          <div id="templeVanq"></div>
+          <a href="#" class="btn inv-btn" id="hideTempleInv">CLOSE</a>
+        </div>
+      </div>
+      <footer>
+        <nav>
+          <a href="#" class="btn nav" id="tempExit">LEAVE TEMPLE</a>
+        </nav>
+      </footer>
+    </section>
+    <!-- OVERLOOK -->
+    <section class="modal" id="overlook">
+      <header>
+        <h1 class="pgTitle">Overlook</h1>
+        <h2 class="evntMsg" id="overMsg"></h2>
+      </header>
+      <h3 class="dialogue" id="overTalk"></h3>
+      <a href="#" class="btn explore" id="expOver">EXPLORE</a>
+      <div class="content" id="overCont">
+        <a href="#" class="btn nav" id="overWish">WISH</a>
+        <div class="choiceBtns" id="wishBtns">
+          <a href="#" class="choice-btn btn" id="overToss">TOSS COINS</a>
+          <a href="#" class="choice-btn btn" id="overLeap">LEAP</a>
+          <a href="#" class="choice-btn btn" id="overExit">LEAVE</a>
+        </div>
+      </div>
+      <div class="player" id="overPlayer">
+        <div class="avatar"></div>
+        <a class="btn inv-btn" id="viewOverInv">INVENTORY</a>
+        <div class="stats" id="overStat"></div>
+        <div class="inventory" id="overInv">
+          <h4 class="inv-Label">Items:</h4>
+          <div id="overItem"></div>
+          <h4 class="inv-Label">Weapons:</h4>
+          <div id="overWeap"></div>
+          <h4 class="inv-Label">Armor:</h4>
+          <div id="overArmor"></div>
+          <h4 class="inv-Label">Foes Vanquished:</h4>
+          <div id="overVanq"></div>
+          <a href="#" class="btn inv-btn" id="hideOverInv">CLOSE</a>
+        </div>
+      </div>
+      <footer>
+        <nav>
+          <a href="#" class="btn nav" id="overMount">MOUNTAIN PATH</a>
+        </nav>
+      </footer>
+    </section>
+    <!-- CHAMPION -->
+    <section class="modal" id="champ">
+      <header>
+        <h1 class="pgTitle">CHAMPION</h1>
+        <h2 class="evntMsg" id="champMsg"></h2>
+      </header>
+      <h3 class="dialogue" id="champTalk"></h3>
+      <a href="#" class="btn explore" id="expChamp">EXPLORE</a>
+      <div class="content" id="champCont">
+        <div class="end-titles" id="end-cred">
+          <div id="credit"></div>
+        </div>
+      </div>
+      <!-- CHAMP CREDITS -->
+      <div class="player" id="champPlayer">
+        <div class="avatar"></div>
+        <a class="btn inv-btn" id="viewChampInv">INVENTORY</a>
+        <div class="stats" id="champStat"></div>
+        <div class="inventory" id="champInv">
+          <h4 class="inv-Label">Items:</h4>
+          <div id="champItem"></div>
+          <h4 class="inv-Label">Weapons:</h4>
+          <div id="champWeap"></div>
+          <h4 class="inv-Label">Armor:</h4>
+          <div id="champArmor"></div>
+          <h4 class="inv-Label">Foes Vanquished:</h4>
+          <div id="champVanq"></div>
+          <a href="#" class="btn inv-btn" id="hideChampInv">CLOSE</a>
+        </div>
+      </div>
+      <footer>
+        <nav>
+          <a href="#" class="btn nav" id="champExit">PLAY AGAIN!</a>
+        </nav>
+      </footer>
+    </section>
+    <!-- HELL -->
+    <section class="modal" id="hell">
+      <header>
+        <h1 class="pgTitle">AWWW, HELL NO...</h1>
+        <h2 class="evntMsg" id="hellMsg"></h2>
+      </header>
+      <h3 class="dialogue" id="hellTalk"></h3>
+      <a href="#" class="btn explore" id="expHell">EXPLORE</a>
+      <div class="content" id="hellCont">
+        <div class="group">
+          <div>
+            <div class="character" id="lawyer"></div>
+            <a href="#" class="talkBtn btn" id="lawyerBtn">talk</a>
+          </div>
+          <div>
+            <div class="character" id="demon"></div>
+            <a href="#" class="talkBtn btn" id="demonBtn">talk</a>
+          </div>
+        </div>
+      </div>
+      <div id="hellPlayer">
+        <div class="avatar avatar-dead"></div>
+      </div>
+      <footer id="hellFoot">
+        <nav>
+          <a href="#" class="btn nav" id="tryAgain">TRY AGAIN?</a>
+        </nav>
+        <div class="group">
+          <div class="character" id="soul1"></div>
+          <div class="character" id="soul3"></div>
+          <div class="character" id="soul2"></div>
+        </div>
+      </footer>
+    </section>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>

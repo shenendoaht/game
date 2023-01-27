@@ -1,0 +1,84 @@
+.avatar {
+  background-image: url('/IMAGE/people/player.png');
+  background-size: contain;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 200px;
+  margin: 0 auto;
+  justify-content: space-around;
+}
+.player {
+  display: flex;
+  height: auto;
+  width: auto;
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: none;
+}
+.stats {
+  text-align: center;
+  margin: 5px auto;
+  max-width: 50ch;
+  padding: 10px;
+  background-color: rgba(154, 154, 154, 0.49);
+  color: rgb(33, 0, 31);
+  font-weight: bold;
+}
+.inventory, #townInv, #welcomeInv {
+  display: none;
+  background: no-repeat center center fixed;
+  padding: 1rem;
+  background-image: url('/IMAGE/elements/scroll.png');
+  background-size: cover;
+  height: 200px;
+  width: 200px;
+  margin: 30px auto;
+  border-radius: 10%;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.inv-Label {
+  text-align: center;
+  text-transform: uppercase;
+  color: black;
+  font-weight: bold;
+}
+
+#arenaPlayer,
+#armoryPlayer,
+#battlePlayer,
+#bedPlayer,
+#bridgePlayer,
+#champPlayer,
+#clearPlayer,
+#deadPlayer,
+#dockPlayer,
+#forestPlayer,
+#housePlayer,
+#hullPlayer,
+#hutPlayer,
+#intHutPlayer,
+#innPlayer,
+#islandPlayer,
+#mountPlayer,
+#outPlayer,
+#overPlayer,
+#quadPlayer,
+#riverPlayer,
+#shipPlayer,
+#shopPlayer,
+#tavPlayer,
+#townPlayer,
+#templePlayer,
+#villagePlayer,
+#welcomePlayer,
+#oceanPlayer,
+#beachPlayer,
+#innerIslePlayer,
+#shipTwoPlayer {
+  display: none;
+}

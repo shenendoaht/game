@@ -1,0 +1,61 @@
+.armor {
+  margin: 10px auto;
+  min-height: 12px;
+  min-width: 12px;
+  height: auto;
+  width: auto;
+  padding: 2rem;
+  background-size: contain;
+  background-repeat: none;
+  background-color: rgba(0, 0, 255, 0.397);
+  border-radius: 15%;
+}
+#flipFlops {
+  background-image: url('/IMAGE/armor/flipFlops.png');
+  height: 45px;
+  width: 45px;
+  display: none;
+}
+
+#leatherGloves{
+  background-image: url('/IMAGE/items/gloves.png');
+  height: 45px;
+  width: 45px;
+  display: none;
+}
+#helm{
+  background-image: url('/IMAGE/armor/helm.png');
+  height: 45px;
+  width: 45px;
+  display: none;
+}
+#shield{
+  background-image: url('/IMAGE/armor/shield.png');
+  height: 45px;
+  width: 45px;
+  display: none;
+}
+#gauntlet{
+  background-image: url('/IMAGE/armor/gauntlet.png');
+  height: 45px;
+  width: 45px;
+  display: none;
+}
+#chainmail{
+  background-image: url('/IMAGE/armor/chainmail.png');
+  height: 45px;
+  width: 45px;
+  display: none;
+}
+#bowlingShoes{
+  background-image: url('/IMAGE/armor/bowlingShoes.png');
+  height: 45px;
+  width: 45px;
+  display: none;
+}
+#topHat{
+  background-image: url('/IMAGE/armor/topHat.png');
+  height: 45px;
+  width: 45px;
+  display: none;
+}

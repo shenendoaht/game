@@ -1,0 +1,178 @@
+/* DISPLAYS */
+.modal {
+  display: none;
+  background: no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100vh;
+    min-width: 100%;
+}
+#welcome {
+  background-image: url('/IMAGE/locations/welcome.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+#town {
+  background-image: url('/IMAGE/locations/main-town.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#house {
+  background-image: url('/IMAGE/locations/house.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#bedroom {
+  background-image: url('/IMAGE/locations/bedroom.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#shop {
+  background-image: url('/IMAGE/locations/shop.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#tavern {
+  background-image: url('/IMAGE/locations/tavern.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#inn {
+  background-image: url('/IMAGE/locations/inn.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#arena {
+  background-image: url('/IMAGE/locations/arena-ext.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#quad {
+  background-image: url('/IMAGE/locations/stage.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#battledome {
+  background-image: url('/IMAGE/locations/arena.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#armory{
+  background-image: url('/IMAGE/locations/armory.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}      
+#river{
+  background-image: url('/IMAGE/locations/forestCreek.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}     
+#clearing{
+  background-image: url('/IMAGE/locations/clearing.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}   
+#dock{
+  background-image: url('/IMAGE/locations/dock.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}   
+#ship{
+  background-image: url('/IMAGE/locations/ship.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#hull {
+  background-image: url('/IMAGE/locations/hull.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#island{
+  background-image: url('/IMAGE/locations/island.dock.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+} 
+#village{
+  background-image: url('/IMAGE/locations/town.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+} 
+#outskirt{    
+  background-image: url('/IMAGE/locations/outskirts.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+} 
+#mountain{
+  background-image: url('/IMAGE/locations/mountain-path.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#overlook{
+  background-image: url('/IMAGE/locations/overlook.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#temple{
+  background-image: url('/IMAGE/locations/temple.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}  
+#forest {
+  background-image: url('/IMAGE/locations/forestPath.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#bridge {
+  background-image: url('/IMAGE/locations/bridge.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#hut {
+  background-image: url('/IMAGE/locations/hut.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#intHut {
+  background-image: url('/IMAGE/locations/int-witch-hut.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#champ {
+  background-image: url('/IMAGE/locations/chest.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+} 
+#hell {
+  background-image: url('/IMAGE/locations/hell.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#hellFoot {
+  background-image: url('/IMAGE/locations/hellFoot.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#ocean{
+  background-image: url('/IMAGE/locations/ocean.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#beach{
+  background-image: url('/IMAGE/locations/beach.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#innerIsle{
+  background-image: url('/IMAGE/locations/inner-isle.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#shipTwo{
+  background-image: url('/IMAGE/locations/ship2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,124 @@
+.group {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  height: 100%;
+  max-width: auto;
+  background-color: transparent;
+}
+.character {
+  height: 200px;
+  width: 200px;
+  margin: 30px auto;
+  display: block;
+  border-radius: 10%;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.undead {
+  height: 150px;
+  width: 150px;
+  margin: 0 auto;
+  display: flex;
+  border-radius: 10%;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+@keyframes burn {
+  0% {transform: rotate(40deg)};
+  10% {transform: rotate(80deg)};
+  20% {transform: rotate(120deg)};
+  30% {transform: rotate(160deg)};
+  40% {transform: rotate(200deg)};
+  50% {transform: rotate(240deg)};
+  60% {transform: rotate(280deg)};
+  70% {transform: rotate(320deg)};
+  80% {transform: rotate(360deg)};
+  90% {transform: rotate(400deg)};
+  100% {transform: rotate(440deg)};
+}
+#monk {
+  background-image: url('/IMAGE/people/monk.png');
+}
+#maid {
+  background-image: url('/IMAGE/people/oldwoman.png');
+}
+#bartender {
+  background-image: url('/IMAGE/people/bartender.png');
+  background-position: sticky;
+}
+#drunk {
+  background-image: url('/IMAGE/people/drunkard.png');
+}
+#beggar {
+  background-image: url('/IMAGE/people/beggar.png');
+}
+#soldier {
+  background-image: url('/IMAGE/people/fighter.png');
+  margin: auto 40%;
+  display: none;
+}
+#soldierBtn {
+  display: none;
+}
+#merchant{
+  background-image: url('/IMAGE/people/merchant.png');
+  display: flex;
+  justify-content: space-around;
+}
+#captain{
+  background-image: url('/IMAGE/people/captain.png');
+}
+#boatswain{
+  background-image: url('/IMAGE/people/boatswain.png');
+}
+#captive {
+  background-image: url('/IMAGE/people/prisoner.png');
+  display: none;
+  justify-content: space-around;
+}
+#constable {
+  background-image: url('/IMAGE/people/constable.png');
+  display: flex;
+  justify-content: space-around;
+}
+#elder {
+  background-image: url('/IMAGE/people/oldwoman.png');
+  display: flex;
+  justify-content: space-around;
+}
+#shepherd{
+  background-image: url('/IMAGE/people/shepherd.png');
+  display: flex;
+  justify-content: flex-end;
+}
+#greatMonkHu{
+  background-image: url('/IMAGE/people/greatMonkHu.png');
+  display: flex;
+  justify-content: space-around;
+}
+#demon{
+    background-image: url('/IMAGE/people/demon.png');
+}
+#lawyer{
+    background-image: url('/IMAGE/people/lawyer.png');
+}
+#soul1 {
+  background-image: url('/IMAGE/people/soul1.png');
+}
+#soul2 {
+  background-image: url('/IMAGE/people/soul2.png');
+}
+#soul3 {
+  background-image: url('/IMAGE/people/soul3.png');
+}
+#soul1, #soul2 {
+  animation: burn 15s linear 0s infinite alternate both;
+}
+#crab {
+  background-image: url('/IMAGE/people/crabman.png');
+  display: none;
+}

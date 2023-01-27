@@ -1,0 +1,126 @@
+.item {
+  /* justify-content: space-evenly;
+  margin: 0 auto;
+  display: flex;
+  max-width: 80px;
+  max-height: 80px; */
+  margin: 10px auto;
+  min-height: 10px;
+  min-width: 10px;
+  height: auto;
+  width: auto;
+  padding: 5px;
+  background-size: contain;
+  background-repeat: none;
+  background-color: transparent;
+}
+#coins {
+  height: 40px;
+  width: 40px;
+  background-image: url('/IMAGE/items/coins.png');
+  display: none;
+}
+#ale{
+  height: 50px;
+  width: 50px;
+  background-image: url('/IMAGE/items/ale.png');
+  display: none;
+}
+#mead{
+  height: 50px;
+  width: 50px;
+  background-image: url('/IMAGE/items/mead.png');
+  display: none;
+}
+#purse{
+  height: 60px;
+  width: 60px;
+  background-image: url('/IMAGE/items/purse.png');
+  display: none;
+}
+#potion{
+  height: 60px;
+  width: 60px;
+  background-image: url('/IMAGE/items/potion.png');
+  display: none;
+}
+#receipt {
+  height: 40px;
+  width: 40px;
+  background-image: url('/IMAGE/elements/scroll.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: none;
+}
+#arrows {
+  background-image: url();
+  height: 45px;
+  width: 45px;
+  display: none;
+}
+#ticket {
+  background-image: url();
+  height: 45px;
+  width: 45px;
+  display: none;
+}
+#apple{
+  background-image: url('/IMAGE/items/apple.png');
+  height: 45px;
+  width: 45px;
+  display: none;
+}
+#ragdoll{
+  background-image: url();
+  height: 45px;
+  width: 45px;
+  display: none;
+}
+#shinyRock{
+  background-image: url();
+  height: 45px;
+  width: 45px;
+  display: none;
+}
+#tinyFish{
+  background-image: url();
+  height: 45px;
+  width: 45px;
+  display: none;
+}
+#bigFish{
+  background-image: url();
+  height: 45px;
+  width: 45px;
+  display: none;
+}
+#sharky{
+  background-image: url();
+  height: 45px;
+  width: 45px;
+  display: none;
+}
+#fishtank{
+  background-image: url('/IMAGE/items/fishTank.png');
+  height: 45px;
+  width: 45px;
+  display: none;
+}
+#treasureChest{
+  background-image: url();
+  height: 45px;
+  width: 45px;
+  display: none;
+}
+#key{
+  background-image: url('/IMAGE/items/key.png');
+  height: 45px;
+  width: 45px;
+  display: none;
+}
+#megaPotion{
+  background-image: url('/IMAGE/items/megapotion.png');
+  height: 45px;
+  width: 45px;
+  display: none;
+}

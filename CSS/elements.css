@@ -1,0 +1,131 @@
+.sidepanel {
+  height: 250px; /* Specify a height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; 
+}
+.content {
+  display: flex;
+}
+.element {
+  background-color: transparent;
+  padding: 1rem;
+  height: auto;
+  width: auto;
+}
+#fountain, #bar, #tree {
+  height: 100px;
+  width: 100px;
+}
+#sky {
+  height: 350px;
+  width: 100%;
+}
+#tree {
+  display: none;
+}
+.scroll {
+  background-image: url('/IMAGE/elements/scroll.png');
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: auto;
+  width: auto;
+  margin: 20px auto;
+  padding: .5em;
+  border-radius: 11%;
+}
+.scrollText{
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.5rem;
+}
+#instructions {
+  display: none;
+}
+.wares {
+  padding: 3rem;
+  height: auto;
+  width: auto;
+  background-color: rgba(27, 26, 26, 0.633);
+  border-radius: 20%;
+}
+#shopWares, #armoryWeapons, #armoryArmor, #armorBtn, #weaponBtn, #quadChoice, #quadFight {
+  display: none;
+  justify-content: space-around;
+}
+.dice, .player-dice, .enemy-dice{
+  display: block;
+  justify-content: space-between;
+  font: bold;
+  font-size: larger;
+  text-align: center;
+  margin: 2rem auto;
+}
+.enemy-die {
+  border: 1px solid black;
+  box-shadow: 3px, 3px, 3px rgba(7, 7, 24, 0.756);
+  border-radius: 20%;
+  background-color: rgba(255, 89, 0, 0.825);
+  color: #111;
+  margin: 0 auto;
+  padding: .75rem .5rem;
+}
+.player-die {
+  border: 1px solid rgb(8, 0, 65);
+  box-shadow: 3px, 3px, 3px rgba(26, 2, 2, 0.756);
+  border-radius: 20%;
+  background-color: rgba(241, 245, 182, 0.825);
+  color: rgb(15, 14, 14);
+  margin: 0 auto;
+  padding: .75rem .5rem;
+}
+#quadDice, 
+#dummyDice, 
+#orcDice, 
+#goblinDice, 
+#banditDice, 
+#golemDice, 
+#minotaurDice, 
+#gladiatorDice, 
+#berserkDice, 
+#guardianDice, 
+#giantDice, 
+#battDice, 
+#forestDice,
+#bridgeDice{
+  display: none;
+}
+.dialogue {
+  background-color: rgba(57, 57, 253, 0.605);
+}
+
+.end-titles, #end-cred {
+  background-image: url('/IMAGE//elements/scroll.png');
+  height: 40%;
+  max-width: 100%;
+  padding: 3rem;
+  margin: 0;
+  display: none;
+}
+#credit {
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  padding-left: 2rem;
+}
+#rowboat {
+  background-image: url('/IMAGE//elements/rowboat.png');
+  height: 250px;
+  width: 250px;
+  margin: 0 auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+

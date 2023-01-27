@@ -1,0 +1,61 @@
+.weapon {
+  margin: 10px auto;
+  min-height: 12px;
+  min-width: 12px;
+  height: auto;
+  width: auto;
+  padding: 5px;
+  background-size: contain;
+  background-repeat: none;
+  background-color: rgba(255, 0, 0, 0.508);
+  border-radius: 20%;
+}
+
+#bow{  
+  background-image: url('/IMAGE/weapons/longbow1.png');
+  height: 45px;
+  width: 45px;
+  display: none;
+}
+#broadsword{
+  background-image: url('/IMAGE/weapons/broadsword.png');
+  height: 45px;
+  width: 45px;
+  display: none;
+}
+#crossbow{
+  background-image: url('/IMAGE/weapons/xbow.png');
+  height: 45px;
+  width: 45px;
+  display: none;
+}
+#dagger{
+  background-image: url('/IMAGE/weapons/dagger1.png');
+  height: 45px;
+  width: 45px;
+  display: none;
+}
+#inflatBat{
+  background-image: url('/IMAGE/weapons/inflatableBat.png');
+  height: 45px;
+  width: 45px;
+  display: none;
+}
+/* #mace{
+  background-image: url();
+  height: 45px;
+  width: 45px;
+  display: none;
+} */
+#magicStick{
+  background-image: url('/IMAGE/weapons//magicStick.png');
+  height: 45px;
+  width: 45px;
+  display: none;
+}
+#trainingSword{
+  background-image: url('/IMAGE/weapons/training-sword.png');
+  height: 45px;
+  width: 45px;
+  display: none;
+}

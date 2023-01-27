@@ -1,0 +1,79 @@
+.enemy {
+  height: 200px;
+  width: 200px;
+  margin: 30px auto;
+  display: block;
+  border-radius: 10%;
+  background-color: rgba(255, 0, 0, 0.518);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.enemyStat{
+  background-color: rgba(169, 169, 169, 0.604);
+  justify-content: space-around;
+  color: rgb(0, 0, 0);
+  margin: 1rem auto;
+  display: block;
+  margin-top: 1rem;
+  border-radius: 20%;
+  text-transform: uppercase;
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+}
+#dummy{
+  background-image: url('/IMAGE/enemies/dummy.png');
+  display: none;
+}
+#orc{
+  background-image: url('/IMAGE/enemies/orc.png');
+  display: none;
+}
+#goblin{
+  background-image: url('/IMAGE/enemies/goblin.png');
+  display: none;
+}
+#bandit{
+  background-image: url('/IMAGE/enemies/bandit.png');
+  display: none;
+}
+#golem{
+  background-image: url('/IMAGE/enemies/golem.png');
+  display: none;
+}
+#minotaur{
+  background-image: url('/IMAGE/enemies/minotaur1.png');
+  display: none;
+}
+#gladiator{
+  background-image: url('/IMAGE/enemies/gladiator2.png');
+  display: none;
+}
+#berserker{
+  background-image: url('/IMAGE/enemies/berserker.png');
+  display: none;
+}
+#guardian{
+  background-image: url('/IMAGE/enemies/guardian.png');
+  display: none;
+}
+#giant{
+  background-image: url('/IMAGE/enemies/giant1.png');
+  display: none;
+}
+#thief{
+  background-image: url('/IMAGE/enemies/thief.png');
+  display: none;
+}
+#troll{
+  background-image: url('/IMAGE/enemies/troll1.png');
+  display: none;
+}
+#invaderOne{
+  background-image: url('/IMAGE/enemies/invaderOne.png');
+  display: none;
+}
+#invaderTwo{
+  background-image: url('/IMAGE/enemies/invaderTwo.png');
+  display: none;
+}
